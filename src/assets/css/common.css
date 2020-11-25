@@ -1,0 +1,17 @@
+/* 全局样式 */
+
+/*  标题距离  */
+
+.lxpz_wrap {
+    text-align: center;
+    margin: 20px;
+}
+
+.show_bottom {
+    text-align: right;
+    /* margin-top: 20px; */
+}
+
+.el-table td {
+    padding: 0;
+}
