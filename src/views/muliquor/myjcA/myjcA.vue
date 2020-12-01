@@ -46,7 +46,7 @@
           <div v-if="scope.$index == 7">-</div>
           <div v-if="0 < scope.$index && scope.$index < 6">
             <div
-              :style="{'color': (scope.row.standard == '-' ? '#ccc':Number(scope.row.col[index])*100 >= (Number(scope.row.standardmin)*100)?(Number(scope.row.col[index])*100) <= (Number(scope.row.standardmax)*100)?'#ccc':'red':'red')}"
+              :style="{'color': (scope.row.standard == '-' ? '#606060':Number(scope.row.col[index])*100 >= (Number(scope.row.standardmin)*100)?(Number(scope.row.col[index])*100) <= (Number(scope.row.standardmax)*100)?'#606060':'red':'red')}"
             >{{scope.row.col[index]}}</div>
           </div>
           <div v-else>

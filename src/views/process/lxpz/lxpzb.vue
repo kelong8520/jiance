@@ -55,15 +55,17 @@
         <template slot-scope="scope">
           <div v-if="scope.$index<20">
             <div
-              :style="{'color': (scope.row.standard == '-' ? '#ccc':Number(scope.row.col[index])*100 >= (Number(scope.row.standardmin)*100)?(Number(scope.row.col[index])*100) <= (Number(scope.row.standardmax)*100)?'#ccc':'red':'red')}"
+              :style="{'color': (scope.row.standard == '-' ? '#606060':Number(scope.row.col[index])*100 >= (Number(scope.row.standardmin)*100)?(Number(scope.row.col[index])*100) <= (Number(scope.row.standardmax)*100)?'#606060':'red':'red')}"
             >{{scope.row.col[index]}}</div>
           </div>
           <div v-if="19 < scope.$index && scope.$index < 31">
             <el-input v-model="scope.row.col[index]"></el-input>
           </div>
-          <div v-if="30 < scope.$index && scope.$index < 36 && index < 9">
-            <el-input v-if="index % 2 == 0" v-model="scope.row.col[index]"></el-input>
-            <div v-else>{{scope.row.col[index]}}</div>
+          <div v-if="30 < scope.$index && scope.$index < 36 && index < 10">
+            <!-- <el-input v-if="index % 2 == 0" v-model="scope.row.col[index]"></el-input>
+            <div v-else>{{scope.row.col[index]}}</div> -->
+            <div v-if="index % 2 == 0">{{scope.row.col[index]}}</div>
+            <el-input v-else v-model="scope.row.col[index]"></el-input>
           </div>
           <div v-if="scope.$index == 36">-</div>
         </template>
@@ -406,7 +408,6 @@
 </template>
 
 <script>
-// :style="{'color': (scope.row.standard == '-' ? '#ccc':scope.row.col[index] >= standard-2? scope.row.col[index] <= standard-2?'#ccc':'red':'red')}"
 import * as testApi from "@/api/testinputsApi.js";
 import querystring from "querystring";
 

@@ -111,7 +111,7 @@ export default {
               title: "展示界面",
               name: "myjcA",
               icon: "el-icon-data-analysis"
-            },
+            }
             // {
             //   title: "历史数据",
             //   name: "mhistory",

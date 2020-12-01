@@ -22,15 +22,8 @@ const mutations = {
       state.tabName = model.name;
     }
   },
-  // reload(state,index){
-  //   let data=state.tabArr.splice(index,1)
-  //   Vue.nextTick(()=>{
-  //     state.tabArr.splice(index,0,data[0])
-  //   })
-  // },
   // 删除tab数组
   deleteTabArr(state, modelName) {
-    // console.log(modelName)
     if (modelName.includes('?')) {
       state.tabArr = state.tabArr.filter(item => !(item.name == modelName.split('?')[0] && item.id == modelName.split('?')[1]))
     } else {
@@ -43,6 +36,12 @@ const mutations = {
     state.tabName = name;
     // console.log("store里面改了name",name)
   },
+  // reload(state,index){
+  //   let data=state.tabArr.splice(index,1)
+  //   Vue.nextTick(()=>{
+  //     state.tabArr.splice(index,0,data[0])
+  //   })
+  // },
 }
 
 const store = new Vuex.Store({
