@@ -55,7 +55,7 @@
             >{{scope.row.col[index]}}</div>
           </div>
           <div v-if="19 < scope.$index && scope.$index < 37">{{scope.row.col[index]}}</div>
-          <div v-else-if="scope.$index == 37">-</div>
+          <div v-else-if="scope.$index == 36">-</div>
         </template>
       </el-table-column>
     </el-table>
